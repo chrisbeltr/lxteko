@@ -22,6 +22,10 @@ img {
   image-rendering: pixelated;
 }
 
+.main {
+  width: min(60dvh, 60dvw);
+}
+
 .center {
   height: 100%;
   display: flex;
