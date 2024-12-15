@@ -41,9 +41,8 @@ img {
   height: max-content;
   padding: 5px;
   border-radius: 15px;
-  background-color: #dfe0d2;
 
-  /* temp */
+  background-color: #dfe0d2;
   font-size: 3rem;
   line-height: 3rem;
 
@@ -74,5 +73,26 @@ a:active {
 }
 
 .main {
-  width: min(60dvh, 60dvw);
+  width: min(60dvh, 80dvw);
+}
+
+@media (width > 1440px) {
+  .center {
+    gap: 7px;
+  }
+
+  .text-wrapper {
+    padding: 15px;
+    border-radius: 25px;
+
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+
+  .subtitle {
+    font-size: 4rem;
+    line-height: 4rem;
+
+    gap: 20px;
+  }
 }
