@@ -77,6 +77,29 @@ a:active {
   width: min(60dvh, 80dvw);
 }
 
+.test {
+  position: relative;
+  max-width: max-content;
+}
+
+.backgrounds {
+  position: absolute;
+  z-index: -1;
+}
+
+.background {
+  color: #b2b0a1;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  transform-origin: bottom left;
+  transform: rotate(-18deg);
+  width: max-content;
+
+  font-size: 3rem;
+  line-height: 2rem;
+}
+
 @media (width > 1440px) {
   .center {
     gap: 7px;
