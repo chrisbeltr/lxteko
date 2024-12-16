@@ -17,15 +17,14 @@ var targetHeight = Math.tan(tilt) * vw + vh;
 
 var currHeight = 0;
 while (currHeight < targetHeight) {
-  currHeight += 32;
   var curr = template.cloneNode();
-  curr.style.setProperty("top", `${currHeight}px`);
-  backgrounds.appendChild(curr);
-  var nodeStyle = window.getComputedStyle(curr);
   // extra one at the beginning to scooch randomly
   curr.innerHTML += getErm();
+  var nodeStyle = window.getComputedStyle(curr);
+  currHeight += 32;
+  curr.style.setProperty("top", `${currHeight}px`);
+  backgrounds.appendChild(curr);
   var scoochAmount = Math.random() * (nodeStyle.width.slice(0, -2) / 2);
-  console.log(scoochAmount);
   curr.style.transform = `${nodeStyle.transform} translateX(-${scoochAmount}px)`;
   while (nodeStyle["width"].slice(0, -2) < vw) {
     curr.innerHTML += getErm();
